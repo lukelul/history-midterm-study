@@ -91,4 +91,4 @@ function methodology(){return `<h3>Why the guide is organized this way</h3><p>Th
 function bindLearning(){const el=(id,fn)=>{let e=document.getElementById(id);if(e)fn(e)};document.querySelectorAll('[data-unit]').forEach(b=>b.onclick=()=>{unitIndex=+b.dataset.unit;hideLesson=false;render();window.scrollTo(0,0)});document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{learnMode=b.dataset.mode;render()});el('unit-prev',e=>e.onclick=()=>{unitIndex--;hideLesson=false;render()});el('unit-next',e=>e.onclick=()=>{unitIndex=(unitIndex+1)%8;hideLesson=false;render()});el('hide-lesson',e=>e.onclick=()=>{hideLesson=!hideLesson;render()});el('unit-notes',e=>e.oninput=()=>{state.drafts['unit'+unitIndex]=e.value;persist()});el('sequence-notes',e=>e.oninput=()=>{state.drafts['sequence'+unitIndex]=e.value;persist()});el('unit-practice',e=>e.onclick=()=>{topic=DATA.units[unitIndex].topic;filter='All cards';index=0;reveal=false;go('recall')})}
 
 render();
-</script><script src="clone-player.js"></script></body></html>
+</script><script src="clone-player.js?v=2"></script></body></html>
