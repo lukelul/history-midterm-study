@@ -1,0 +1,3 @@
+generate_narration.py
+audio/*.wav
+__pycache__/
